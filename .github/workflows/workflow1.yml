@@ -1,5 +1,5 @@
 name: workflow1name
-on: [push,workflow-dispatch]
+on: [push,workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
