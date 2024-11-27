@@ -1,7 +1,5 @@
 name: Issues-workflow
-on: 
-  pull_request: [opened,edited]
-  workflow_dispatch:
+on: issues
 jobs:
   Output-version:
     runs-on: ubuntu-latest
