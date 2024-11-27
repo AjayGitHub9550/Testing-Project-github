@@ -1,8 +1,14 @@
 name: Issues-workflow
 on: issues
 jobs:
-  Issues-output:
+  Output-version:
     runs-on: ubuntu-latest
     steps:
       - name: output the events
         run: echo " ${{toJSON(github.run_number)}}"
+  Output-events:
+    needs: Output-version
+    runs-on: ubuntu-latest
+    steps:
+      - name: output the events
+        run: echo " ${{toJSON(github.events)}}"
